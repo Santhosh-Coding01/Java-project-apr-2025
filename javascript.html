@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript </title>
+  <link rel="stylesheet" href="css001.css">
+</head>
+<body>
+
+  <h1>&nbsp;JavaScript</h1>
+
+  <div class="container">
+
+    <div class="main-content">
+
+      <div class="flashcard">
+        <h3>What JavaScript Stands For:</h3>
+        <ul>
+          <li>JavaScript is a programming language that allows you to create interactive and dynamic content on web pages.</li>
+          <li>Unlike HTML or CSS, JavaScript is not an acronym. It was named to ride on the popularity of Java but is entirely different.</li>
+        </ul>
+      </div>
+
+      <div class="flashcard">
+        <h3>Example:</h3>
+
+        <div style="padding: 20px; background-color: #f0f0f0;">
+          <pre style="background-color: white; padding: 15px; border-radius: 8px; overflow-x: auto;">
+<code>&lt;script&gt;
+  function showMessage() {
+    document.getElementById('output').innerText = 'Hello from JavaScript!';
+  }
+&lt;/script&gt;
+
+&lt;button onclick="showMessage()"&gt;Click Me&lt;/button&gt;
+&lt;p id="output"&gt;&lt;/p&gt;
+</code></pre>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <h4>Output:</h4>
+        <div style="background-color: white; padding: 40px; border-radius: 8px; width: fit-content;">
+          <button onclick="showMessage()" style="padding: 10px 15px;">Click Me</button>
+          <p id="output" style="margin-top: 15px; font-weight: bold;"></p>
+        </div>
+
+        <h4>Explanation:</h4>
+        <p>
+          This JavaScript example adds interactivity to the page. When the button is clicked, a JavaScript function updates the text inside the paragraph using the DOM.
+        </p>
+      </div>
+
+    </div> 
+
+  
+    <div class="ad-box">
+      <h3>Advertisement</h3>
+      <img src="ad.jpg" alt="Ad Image">
+      <p>Check out our products!</p>
+    </div>
+
+  </div> 
+
+  <script>
+    function showMessage() {
+      document.getElementById('output').innerText = 'Hello from JavaScript!';
+    }
+  </script>
+
+</body>
+</html>

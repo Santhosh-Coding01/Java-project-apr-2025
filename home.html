@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+  <title>Simple W3Schools Clone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .search-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .search-box {
+      padding: 15px;
+      width: 300px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      outline: none;
+    }
+
+    .search-button {
+      padding: 15px 15px;
+      font-size: 16px;
+      margin-left: 10px;
+      border-radius: 35px;
+      border: none;
+      background-color: #003971;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-button:hover {
+      background-color: #0b7ced;
+    }
+
+    .heading {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 30px;
+      text-align: center;
+      color: #0e2e4d;
+      font-weight: strong;
+    }
+
+    .content1 {
+      background-color: #0e2e4d;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(15, 5, 54, 0.494);
+      text-align: center;
+      color: #ffffff;
+      height: 10vh;                
+    }
+
+    .content2 {
+      display: flex;
+      flex-direction: column;       /* 👈 Makes items stack vertically */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content2 h4 {
+      padding: 15px;
+      width: 180px;
+      font-size: 20px;
+      border-radius: 50px;
+      color: white;
+      text-align: center;
+    }
+
+    .bg1 { background-color: #353093db; }  /* Blue */
+    .bg2 { background-color: #218f3a; }    /* Green */
+    .bg3 { background-color: #f27040; }    /* Orange */
+    .bg4 { background-color: #565656; }    /* grey */
+  </style>
+  </style>
+</head>
+
+<body >
+  
+  <centre>
+    
+    <main class="content1">
+      <h1>Welcome to MyCodeSchool</h1>
+      </main>
+
+</centre>
+<br><br>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <form action="search_results.html" method="get">
+
+      <input type="text" name="query" placeholder="Search..." class="search-box" required>
+      <button type="submit" class="search-button">
+        <i class="fas fa-search"></i> 
+      </button>
+          </form>
+  </div>
+
+  <!-- Main Content -->
+    <main class="heading">
+  <h3>Learn Coding</h3>
+  </main>
+  <centre>
+    <main class="content2">
+      <h4 class="bg1">Learn HTML</h4>
+      <h4 class="bg2">Tutorial Videos</h4>
+      <h4 class="bg3">Get Certified</h4>
+      <h4 class="bg4">Reference</h4>
+    </main>
+</centre>  
+
+</body>
+</html>

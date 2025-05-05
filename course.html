@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Course - MyCodeSchool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .course-box {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .course-box h2 {
+      margin-bottom: 20px;
+      color: #0e2e4d;
+    }
+
+    .course-box select {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .course-box button {
+      padding: 10px 20px;
+      background-color: #0e2e4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .course-box button:hover {
+      background-color: #15466f;
+    }
+  </style>
+</head>
+<body>
+  <div class="course-box">
+    <h2>Select a Course</h2>
+    <select id="courseSelect">
+      <option value="">-- Choose a course --</option>
+      <option value="html_define.html">HTML</option>
+      <option value="css_subtopic.html">CSS</option>
+      <option value="javascript.html">JavaScript</option>
+    </select>
+    <br>
+    <button onclick="loadCourse()">Go to Course</button>
+  </div>
+
+  <script>
+    function loadCourse() {
+      const course = document.getElementById("courseSelect").value;
+      if (course) {
+        window.location.href = `iframes.html?course=${course}`;
+      } else {
+        alert("Please select a course first.");
+      }
+    }
+  </script>
+</body>
+</html>

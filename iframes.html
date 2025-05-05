@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyCodeSchool</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      
+    }
+    header {
+      background-color: #0e2e4d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      justify-content: space-between;
+      height: 15vh;               
+    }
+    nav a {
+      color: white;
+      margin: 0 35px;
+      text-decoration: none;
+      font-size: 20px;
+
+    }
+    nav a:hover {
+      background-color: #bebebe;
+      color: #0004ff;
+      padding: 10px;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    aside {
+      width: 250px;
+      background-color: #ecf0f1;
+      height: 100vh; /* Full height */
+    }
+
+    aside iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    main {
+      flex-grow: 29;
+      
+    }
+
+    main iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 10px;
+      padding: 10;
+    }
+
+    iframe[name="contentFrame"] {
+      height: 800px;
+      border: none;
+      display: block;
+    }
+    .bar {
+      width: 30px;
+      height: 2px;
+      background-color: white;
+      margin: 3px 0;
+      border-radius: 2px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>MyCodeSchool </h1>
+    <nav>
+
+      <div class="menu-icon" onclick="alert('Menu clicked!')">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <a href="home.html" target="contentFrame">Home</a>
+      <a href="html_define.html" target="contentFrame">HTML</a>
+      <a href="css_subtopic.html" target="contentFrame">CSS</a>
+      <a href="javascript.html" target="contentFrame">JavaScript</a>
+      <a href="not_available.html" target="contentFrame">Java</a>
+      <a href="not_available.html" target="contentFrame">Python</a>
+      <a href="not_available.html" target="contentFrame">C++</a>
+      <a href="not_available.html" target="contentFrame">C#</a>
+      <a href="not_available.html" target="contentFrame">SQL</a>
+      <a href="not_available.html" target="contentFrame">PHP</a>      
+
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside>
+
+      <iframe src="sidebar03.html"></iframe>
+    </aside>
+    <main>
+      <iframe name="contentFrame" ></iframe>
+    </main>
+  </div>
+  <script>
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const course = urlParams.get("course");
+      if (course) {
+        document.querySelector('iframe[name="contentFrame"]').src = course;
+      }
+    }
+
+    function showUnavailableCourse() {
+      document.querySelector('iframe[name="contentFrame"]').src = 'not_available.html';
+      document.querySelector('iframe[name="contentFrame"]').contentWindow.document.body.innerHTML = `
+        <div class="course-unavailable">
+          This course is not available at the moment.
+        </div>
+      `;
+    }
+  </script>
+  
+</body>
+</html>
